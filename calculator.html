@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .calculator {
+            width: 25%;
+            padding: 50x 20px;
+            background-color: #252525;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #8b8b8b;
+        }
+
+        .user_input {
+            width: 100%;
+            height: 80px;
+        }
+
+
+        .controls {
+            padding: 20px 0px;
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: calc(20%/3);
+            row-gap: 20px;
+            justify-content: center;
+        }
+        
+        .inp {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-indent: 10px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+
+        .control_button {
+            width: 70px;
+            height: 70px;
+            background-color: lightgray;
+            font-size: 18px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: .1s;
+            font-weight: bold;
+        }
+
+        .control_button:active {
+            background-color: #252525;
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <section class="container">
+
+        <div class="calculator">
+
+            <div class="user_input">
+                <input readonly class="inp" placeholder="start here">
+            </div>
+
+            <div class="controls">
+
+                <button class="control_button" onclick="setValue(1,)">1</button>
+                <button class="control_button" onclick="setValue(2)">2</button>
+                <button class="control_button" onclick="setValue(3)">3</button>
+                <button class="control_button" onclick="setValue('+' , 'operator')">+</button>
+
+                <button class="control_button" onclick="setValue(4)">4</button>
+                <button class="control_button" onclick="setValue(5)">5</button>
+                <button class="control_button" onclick="setValue(6)">6</button>
+                <button class="control_button" onclick="setValue('-' , 'operator')">-</button>
+
+                <button class="control_button" onclick="setValue(7)">7</button>
+                <button class="control_button" onclick="setValue(8)">8</button>
+                <button class="control_button" onclick="setValue(9)">9</button>
+                <button class="control_button" onclick="setValue('*' , 'operator')">*</button>
+
+                <button class="control_button" onclick="setValue(0)">0</button>
+                <button class="control_button" onclick="setValue('00')">00</button>
+                <button class="control_button" onclick="setValue('/' , 'operator')">/</button>
+                <button class="control_button" onclick="setValue('.' , 'operator')">.</button>
+                <button class="control_button" onclick="squareRoot()">&#8730</button>
+
+                <button class="control_button" onclick="backSpace()">clear</button>
+                <button class="control_button" onclick="calculate()">=</button>
+                <button class="control_button" onclick="clearAll()">AC</button>
+
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="./calculator.js"></script>
+</body>
+</html>
